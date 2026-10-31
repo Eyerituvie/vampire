@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>World Explorers</title>
+    <meta
+      name="description"
+      content="A colorful geography website for kids with fun facts, continents, landforms, and a quiz."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Nunito:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body id="top">
+    <header class="site-header">
+      <div class="container nav-bar">
+        <div class="brand" aria-label="World Explorers logo">
+          <span class="brand-icon">🌍</span>
+          <span>World Explorers</span>
+        </div>
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="#continents">Continents</a>
+          <a href="#landforms">Landforms</a>
+          <a href="#quiz">Quiz</a>
+          <a href="#facts">Fun Facts</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <p class="eyebrow">Adventure time!</p>
+            <h1>Explore the world one amazing fact at a time.</h1>
+            <p class="hero-text">
+              Jump from snowy mountains to sunny deserts and discover the amazing places,
+              people, and natural wonders on our planet.
+            </p>
+            <div class="hero-actions">
+              <a href="#continents" class="primary-btn">Start exploring</a>
+              <a href="#quiz" class="secondary-btn">Play a quiz</a>
+            </div>
+            <div class="mini-stats" aria-label="Interesting geography stats">
+              <div>
+                <strong>7</strong>
+                <span>continents</span>
+              </div>
+              <div>
+                <strong>5</strong>
+                <span>oceans</span>
+              </div>
+              <div>
+                <strong>1</strong>
+                <span>amazing Earth</span>
+              </div>
+            </div>
+          </div>
+          <div class="hero-visual" aria-label="Illustrated map with travel icons">
+            <div class="globe-card">
+              <div class="globe">🌎</div>
+              <div class="travel travel-one">🏔️</div>
+              <div class="travel travel-two">🐘</div>
+              <div class="travel travel-three">🌊</div>
+              <div class="travel travel-four">🦒</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="continents section" id="continents">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Pick a place</p>
+            <h2>Choose a continent to explore</h2>
+          </div>
+          <div class="continent-layout">
+            <div class="continent-cards" id="continentCards" aria-live="polite"></div>
+            <aside class="continent-info" id="continentInfo" aria-live="polite"></aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="landforms section" id="landforms">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Nature explorer</p>
+            <h2>Meet the landforms of Earth</h2>
+          </div>
+          <div class="landform-grid">
+            <article class="landform-card mountain">
+              <div class="icon">🏔️</div>
+              <h3>Mountains</h3>
+              <p>Huge rocky peaks that rise high above the land.</p>
+            </article>
+            <article class="landform-card river">
+              <div class="icon">🌊</div>
+              <h3>Rivers</h3>
+              <p>Waterways that flow across the land and help plants and animals thrive.</p>
+            </article>
+            <article class="landform-card desert">
+              <div class="icon">🏜️</div>
+              <h3>Deserts</h3>
+              <p>Dry areas with hot days, cold nights, and rare rainfall.</p>
+            </article>
+            <article class="landform-card ocean">
+              <div class="icon">🌊</div>
+              <h3>Oceans</h3>
+              <p>Huge salty seas that cover most of Earth and are home to many creatures.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="quiz section" id="quiz">
+        <div class="container quiz-wrap">
+          <div class="section-heading align-left">
+            <p class="eyebrow">Mini challenge</p>
+            <h2>Geography quiz</h2>
+          </div>
+          <div class="quiz-card" id="quizCard">
+            <div class="quiz-topbar">
+              <span class="badge">Question <span id="questionNumber">1</span>/<span id="totalQuestions">4</span></span>
+              <span class="score" id="scoreDisplay">Score: 0</span>
+            </div>
+            <h3 id="questionText">Loading question...</h3>
+            <div id="answerButtons" class="answer-buttons" aria-live="polite"></div>
+            <button class="next-btn" id="nextButton" type="button" hidden>Next question</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="facts section" id="facts">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Did you know?</p>
+            <h2>Cool facts about our planet</h2>
+          </div>
+          <div class="fact-grid">
+            <article class="fact-card">
+              <span>🌎</span>
+              <p>Earth is the only planet we know with liquid water on the surface.</p>
+            </article>
+            <article class="fact-card">
+              <span>🗺️</span>
+              <p>The Pacific Ocean is so large it could hold all the land on Earth.</p>
+            </article>
+            <article class="fact-card">
+              <span>🌧️</span>
+              <p>Rain falls in the sky, but rivers carry water back to the sea.</p>
+            </article>
+            <article class="fact-card">
+              <span>🌍</span>
+              <p>Mount Everest is the tallest mountain above sea level on Earth.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>Made by Yore  for curious kids who love to explore the world.</p>
+        <a href="#top">Back to top ↑</a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
